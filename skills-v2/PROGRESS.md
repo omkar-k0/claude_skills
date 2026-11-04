@@ -20,5 +20,10 @@ Only work with a file or tool result behind it is listed.
 - exam-study-pack and panel-regression-rigor references copied unchanged.
 - grep for em dashes and reasoning-display phrases across skills-v2: only hit is rigor-core's own prohibition sentence.
 
-## Phase 3: four new skills, EVAL.md, zips, PR
-Not started.
+## Phase 3: four new skills, EVAL.md, zips, PR (done 2026-11-04)
+- Four new `skills-v2/<skill>/SKILL.md` written with references: life-os (37 lines + references/life-system.md), vault-keeper (29 + references/vault-rules.md), ship-with-eval (36 + references/projects.md), backtest-gatekeeper (37 + references/research-rules.md). Descriptions 615 to 648 characters.
+- `CHANGELOG.md`: one line per removal, addition, or fix for all 14 skills.
+- `QUESTIONS.md`: 25 items, each pointing at the file holding its `[CONFIRM]`.
+- `EVAL.md`: 28 fresh-context Sonnet runs (two prompts per skill, one skill folder loaded, no access to other skills or CONTEXT.md), judged against each skill's own rules. 27 PASS. One run returned no output because the API refused the prompt's request for internal reasoning (reasoning_extraction); re-tested with a rephrased prompt, PASS. One gate sentence in life-os tightened after its adversarial run and re-tested (result recorded in EVAL.md).
+- 14 upload-ready zips built by `zip -r` from each skill folder (`ls skills-v2/*.zip | wc -l` = 14), rebuilt after the life-os edit.
+- `context/CONTEXT.md` never committed (`git ls-files context` is empty).
